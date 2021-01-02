@@ -1,0 +1,15 @@
+.roundedNumber {
+  background: #173f5f;
+  width: 10em;
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ol li {
+  margin: 1em 0;
+}
