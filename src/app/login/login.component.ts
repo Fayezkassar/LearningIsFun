@@ -20,16 +20,19 @@ export class LoginComponent implements OnInit {
   error: string;
   emailAddress: string;
   userUrl = 'https://learningisfun-328b1-default-rtdb.firebaseio.com/users.json';
-  json = JSON.parse(localStorage.userInfo);
-  firstName = this.json.firstName;
-  lastName = this.json.lastName;
-  phoneNumber = this.json.phoneNumber;
+
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
 
   constructor(public firebaseService: FirebaseService,
               private http: HttpClient) { }
 
   ngOnInit(): void {
     if(localStorage.user != null) {
+      this.firstName = JSON.parse(localStorage.userInfo).firstName;
+      this.lastName = JSON.parse(localStorage.userInfo).lastName;
+      this.phoneNumber = JSON.parse(localStorage.userInfo).phoneNumber;
       var json = JSON.parse(localStorage.user);
       this.emailAddress = json.email;
     }
