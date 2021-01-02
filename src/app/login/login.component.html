@@ -50,9 +50,11 @@
             </div>
             <div *ngIf="isloggedIn" class="login_form">
                 <div class="login_title">
-                    <span>Welcome !</span>
+                    <span>Welcome {{ firstName }} !</span>
                 </div>
-                <div class="myInfo">Your email address : {{ emailAddress }}</div>
+                <div class="myInfo">Full name : {{ firstName }} {{ lastName }}</div>
+                <div class="myInfo">Email address : {{ emailAddress }}</div>
+                <div class="myInfo">Phone Number : {{ phoneNumber }}</div>
                 <button class="login_button" (click)="signOut()">Sign out</button>
             </div>
         </div>

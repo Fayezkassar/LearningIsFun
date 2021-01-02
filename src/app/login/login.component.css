@@ -41,10 +41,11 @@
 
 .login_title {
     margin-top: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     color: #2e79b6;
     font-size: 40px;
     line-height: 1;
+    font-family: cursive;
 }
 
 .login_username {
@@ -79,7 +80,8 @@
 }
 
 .myInfo {
-    margin-top: 40px;
     font-size: 20px;
+    margin-bottom: 10px;
+    font-family: cursive;
 }
 

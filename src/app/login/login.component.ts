@@ -19,7 +19,11 @@ export class LoginComponent implements OnInit {
   userInfo: any;
   error: string;
   emailAddress: string;
-  userUrl = 'https://learningisfun-328b1-default-rtdb.firebaseio.com/users.json'
+  userUrl = 'https://learningisfun-328b1-default-rtdb.firebaseio.com/users.json';
+  json = JSON.parse(localStorage.userInfo);
+  firstName = this.json.firstName;
+  lastName = this.json.lastName;
+  phoneNumber = this.json.phoneNumber;
 
   constructor(public firebaseService: FirebaseService,
               private http: HttpClient) { }

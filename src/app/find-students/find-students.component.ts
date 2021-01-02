@@ -24,7 +24,7 @@ export class FindStudentsComponent implements OnInit {
     })).subscribe(res =>
       console.log(res))
 
-    console.log(this.courses)
+    this.courses.reverse();
   }
 
 }
