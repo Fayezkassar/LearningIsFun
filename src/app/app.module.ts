@@ -20,6 +20,7 @@ import { FindStudentsComponent } from './find-students/find-students.component';
 import { AngularFireModule } from '@angular/fire';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     ReportCardComponent,
     FindStudentsComponent,
     ContactUsComponent,
+    FooterComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
