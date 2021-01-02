@@ -1,0 +1,69 @@
+<app-navbar></app-navbar>
+
+<div class="wrapping">
+    <div></div>
+    <form *ngIf="isLoggedIn">
+        <div class="form-group">
+            <div class="title">
+                <label>Find the perfect teacher</label>
+            </div>
+            <form (ngSubmit)="addReport()" [formGroup]="form">
+                <label class="question">What do you want to learn ?</label>
+                <div class="two-fields-grid">
+                    <div class="wrapping-square">
+                        <mat-form-field>
+                            <mat-label>choose an option</mat-label>
+                            <mat-select formControlName="LearningType">
+                                <mat-option *ngFor='let option of learningOption' value="{{option.REF}}">
+                                    {{option.NAME}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="wrapping-square" *ngIf="showDD2">
+                        <mat-form-field>
+                            <mat-label>{{learningTypeLabel}}</mat-label>
+                            <mat-select formControlName="LearningType2">
+                                <mat-option *ngFor='let option of secondDD' value="{{option.REF}}">
+                                    {{option.NAME}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="two-fields-grid">
+                    <div class="wrapping-square" *ngIf="showDD3">
+                        <mat-form-field>
+                            <mat-label>Choose a course</mat-label>
+                            <mat-select formControlName="LearningType3">
+                                <mat-option *ngFor='let option of thirdDD' value="{{option.NAME}}">
+                                    {{option.NAME}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <label class="question">How many hours do you need</label>
+                <div class="two-fields-grid">
+                    <div class="wrapping-square">
+                        <mat-form-field>
+                            <mat-label>choose an range</mat-label>
+                            <mat-select formControlName="HoursNeeded">
+                                <mat-option *ngFor='let option of hoursNeededList' value="{{option}}">
+                                    {{option}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <button class="save_button" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </form>
+    <div *ngIf="!isLoggedIn" class="loginr">
+        <div>Please log in to start learning</div>
+        <button class="login_button" (click)="login()">Log in</button>
+    </div>
+</div>

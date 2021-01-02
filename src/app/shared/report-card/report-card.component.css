@@ -1,0 +1,21 @@
+.report-card {
+    padding: 30px 20px 10px 25px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 25% 25% 12% 8% 8% 8%;
+    grid-template-columns: 100%;
+}
+
+.course {
+    font-size: 16px;
+}
+
+.course2{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact{
+    font-size: 18px;
+    font-style: italic;
+}

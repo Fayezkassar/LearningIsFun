@@ -1,0 +1,60 @@
+<div id="app_login" class="login">
+    <div class="login_grid">
+        <div class="click_overlay" (click)="close()"></div>
+        <div class="menu_login">
+            <div *ngIf="!isloggedIn">
+                <form class="login_form" [formGroup]="form">
+                    <div class="login_title">
+                        <span>Start learning today !</span>
+                    </div>
+                    <div class="two-fields-grid">
+                        <div *ngIf="signupPage" class="wrapping-square login_password">
+                            <mat-form-field>
+                                <mat-label>First Name</mat-label>
+                                <input matInput formControlName="firstName">
+                            </mat-form-field>
+                        </div>
+                        <div *ngIf="signupPage" class="wrapping-square login_password">
+                            <mat-form-field>
+                                <mat-label>Last Name</mat-label>
+                                <input matInput formControlName="lastName">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    
+                    <div *ngIf="signupPage" class="wrapping-square login_password">
+                        <mat-form-field>
+                            <mat-label>Phone Number</mat-label>
+                            <input matInput formControlName="phoneNumber">
+                        </mat-form-field>
+                    </div>
+                    <div class="wrapping-square login_password">
+                        <mat-form-field>
+                            <mat-label>email</mat-label>
+                            <input matInput formControlName="username">
+                        </mat-form-field>
+                    </div>
+                    <div class="wrapping-square login_password">
+                        <mat-form-field>
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" formControlName="password">
+                        </mat-form-field>
+                    </div>
+                    <button *ngIf="signinPage" class="login_button" (click)="onSignin()">Sign in</button>
+                    <button *ngIf="signupPage" class="login_button" (click)="onSignup()">Sign up</button>
+                    <div *ngIf="error" class="error">{{error}}</div>
+                    <div *ngIf="signinPage">No accounts? Click here to <span class="signupbutton" (click)="switchToSignUp()">Sign Up</span></div>
+                    <div *ngIf="signupPage">Already have an account? Click here to <span class="signupbutton" (click)="switchToSignIn()">Sign In</span></div>
+
+                </form>
+            </div>
+            <div *ngIf="isloggedIn" class="login_form">
+                <div class="login_title">
+                    <span>Welcome !</span>
+                </div>
+                <div class="myInfo">Your email address : {{ emailAddress }}</div>
+                <button class="login_button" (click)="signOut()">Sign out</button>
+            </div>
+        </div>
+    </div>
+</div>

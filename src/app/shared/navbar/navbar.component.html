@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-dark sticky-top" style="background-color:#173f5f;">
+  <div class="container-fluid">
+      <a class="navbar-brand" href='#'>Teach.lb</a>
+
+      <button class="navbar-toggler" type="button " data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav ml-auto" >
+              <li
+                  *ngFor="let page of pages; index as i;"
+                  class="nav-item"
+                  [ngClass]="{'active': activeTab == page.routeName}"
+                  (click)="navigateToPage(page.routeName)"
+                  style="cursor: pointer;"
+                  >
+                  <a class="nav-link">{{page.pageDisplayName}}</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<app-login></app-login>

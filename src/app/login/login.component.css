@@ -1,0 +1,85 @@
+.login {
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    z-index: 50;
+    left: 0;
+    transition: 0.5s;
+    display: grid;
+    text-align: right;
+    grid-gap: 0px;
+    overflow-y: auto;
+}
+
+.open {
+    width: 100%;
+}
+
+.login_grid {
+    display: grid;
+    grid-template-columns: 0 100%;
+}
+
+@media screen and (min-width: 768px){
+    .login_grid{
+        display: grid;
+        grid-template-columns: auto 550px;
+    }
+}
+
+.menu_login {
+    visibility: visible;
+    opacity: 1;
+    background-color: rgb(245, 243, 243);
+}
+
+.login_form {
+    text-align: center;
+    display: grid;
+    padding: 10px 80px;
+}
+
+.login_title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: #173f5f;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.login_username {
+    margin-top: 75px;
+    border-radius: 10px;
+}
+
+.login_password {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.login_button {
+    margin: 40px 0px 20px 0px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #173f5f;
+    color: rgb(250, 250, 250);
+    font-weight: bold;
+}
+
+.error{
+    color: red;
+    margin-bottom: 10px;
+    font-size: 16px 
+}
+
+.signupbutton {
+    color: blue;
+    border-bottom: blue;
+    cursor: pointer;
+}
+
+.myInfo {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
