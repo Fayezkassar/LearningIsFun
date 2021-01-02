@@ -3,6 +3,7 @@
     font-size: 50px;
     margin-top: 60px;
     line-height: 1;
+    font-family: cursive;
 }
 
 .title2{
@@ -11,17 +12,17 @@
     margin-top: 40px;
     margin-bottom: 10px;
     line-height: 1;
+    font-family: cursive;
 }
 
-.image{
-    width:90%;
+.card-text {
+    font-family: cursive;
 }
 
-.email {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 18px;
-    font-style: italic;
-    line-height: 1;
-    width:100%;
+.alignc {
+    margin-top: 25px;
+}
+
+.card {
+    border: 0ch;
 }
