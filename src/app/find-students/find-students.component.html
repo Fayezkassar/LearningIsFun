@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="grid-container row">
-        <div *ngFor="let element of courses" class="col-lg-2 col-md-3 col-sm-4 col-6" style="padding: 0px 10px">
+        <div *ngFor="let element of courses" class="col-lg-3 col-md-4 col-sm-6" style="padding: 0px 25px">
             <div class="report-card">
                 <app-report-card name="{{element.firstName}}" lastName="{{element.lastName}}" course="{{element.course}}" hoursNeeded="{{element.numberOfHours}}" phoneNumber="{{element.phoneNumber}}" email="{{element.username}}"></app-report-card>
             </div>

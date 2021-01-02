@@ -53,8 +53,7 @@ export class LoginComponent implements OnInit {
       .subscribe(res =>
         console.log(res))
       await this.firebaseService.signin(username,password).catch(error =>
-        this.error = 'Something went wrong'
-      );
+        this.error = error);
         
       if(this.firebaseService.isLoggedIn) {
         localStorage.setItem('userInfo', JSON.stringify(this.userInfo))
@@ -73,12 +72,19 @@ export class LoginComponent implements OnInit {
       const user = this.form.getRawValue();
       const username = user.username !== undefined && user.username !== null ? user.username.trim() : '';
       const password = user.password !== undefined && user.password !== null ? user.password.trim() : '';
+      const userInfo: user = {
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: username,
+        phoneNumber: user.phoneNumber
+      }
       
-      await this.firebaseService.signup(username,password)
+      await this.firebaseService.signup(username,password).catch(error =>
+        this.error = error)
       if(this.firebaseService.isLoggedIn) {
         this.http.post<user>(this.userUrl, user).subscribe(res =>
           console.log(res))
-        localStorage.setItem('userInfo', JSON.stringify(user))
+        localStorage.setItem('userInfo', JSON.stringify(userInfo))
         this.isloggedIn = true
         var json = JSON.parse(localStorage.user);
         this.emailAddress = json.email;

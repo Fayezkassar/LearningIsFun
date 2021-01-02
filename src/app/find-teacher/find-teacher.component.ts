@@ -106,9 +106,6 @@ export class FindTeacherComponent implements OnInit {
             {NAME: "Intelligence artificielle", REF:"4"},
           ]
             break;
-          case "5":
-            this.thirdDD = ["3eme"]
-            break;
         }
       }
     })
@@ -122,8 +119,7 @@ export class FindTeacherComponent implements OnInit {
     this.esibCourses = [{NAME: "SUP", REF:"1"},
       {NAME: "SPE", REF:"2"},
       {NAME: "1er", REF:"3"},
-      {NAME: "2eme", REF:"4"},
-      {NAME: "3eme", REF:"5"}
+      {NAME: "2eme", REF:"4"}
     ],
 
     this.internationalTest = [{NAME: "SAT", REF:"1"},
@@ -143,7 +139,7 @@ export class FindTeacherComponent implements OnInit {
     this.computerLanguageList = [{NAME: "Python", REF:"1"},
       {NAME: "C++", REF:"2"},
       {NAME: "Java", REF:"3"},
-      {NAME: "Angular (html,css,typescript)", REF:"4"}
+      {NAME: "Angular", REF:"4"}
     ],
 
 
@@ -168,5 +164,6 @@ export class FindTeacherComponent implements OnInit {
       this.http.post<course>(this.userUrl, course).subscribe(res =>
         console.log(res))
     }
+    this.form.reset();
   }
 }
