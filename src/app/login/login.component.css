@@ -45,7 +45,7 @@
     color: #2e79b6;
     font-size: 38px;
     line-height: 1;
-    font-family: cursive;
+    font-family: Snell Roundhand, cursive;
 }
 
 .login_username {
@@ -63,6 +63,7 @@
     height: 60px;
     border-radius: 10px;
     background-color: #2e79b6;
+    font-family: Snell Roundhand, cursive;
     color: rgb(250, 250, 250);
     font-weight: bold;
 }
@@ -76,12 +77,17 @@
 .signupbutton {
     color: blue;
     border-bottom: blue;
+    font-family: Snell Roundhand, cursive;
     cursor: pointer;
 }
 
 .myInfo {
     font-size: 20px;
     margin-bottom: 10px;
-    font-family: cursive;
+    font-family: Snell Roundhand, cursive;
+}
+
+.mat-form-field-label {
+    padding: 10px;
 }
 

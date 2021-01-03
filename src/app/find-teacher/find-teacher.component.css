@@ -1,6 +1,7 @@
 .title {
     text-align: center;
     line-height: normal;
+    font-family: Snell Roundhand, cursive;
     margin: 40px;
     font-size: 40px;
 }
@@ -8,6 +9,7 @@
 .question{
     text-align: left;
     font-size: 30px;
+    font-family: Snell Roundhand, cursive;
     line-height: 1;
 }
 
@@ -15,6 +17,7 @@
     text-align: center;
     font-size: 30px;
     margin: 80px 30px;
+    font-family: Snell Roundhand, cursive;
     line-height: 1;
 }
 
@@ -24,6 +27,7 @@
     width: 200px;
     border-radius: 10px;
     background-color: #2e79b6;
+    font-family: Snell Roundhand, cursive;
     color: rgb(250, 250, 250);
     font-weight: bold;
 }

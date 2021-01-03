@@ -1,8 +1,16 @@
 <app-navbar></app-navbar>
-<div class="grid-container row">
-        <div *ngFor="let element of courses" class="col-lg-3 col-md-4 col-sm-6" style="padding: 0px 25px">
-            <div class="report-card">
-                <app-report-card name="{{element.firstName}}" lastName="{{element.lastName}}" course="{{element.course}}" hoursNeeded="{{element.numberOfHours}}" phoneNumber="{{element.phoneNumber}}" email="{{element.username}}"></app-report-card>
-            </div>
+<form [formGroup]="form">
+    <div class="search-input">
+        <mat-form-field>
+            <mat-label class="labell">Search by name or course</mat-label>
+            <input matInput type="search" formControlName="searchText">
+        </mat-form-field>
+    </div>
+</form>
+<div class="grid-container row" style="padding-top: 0px;">
+    <div *ngFor="let element of courses2" class="col-lg-3 col-md-4 col-sm-6" style="padding: 0px 25px">
+        <div class="report-card">
+            <app-report-card name="{{element.firstName}}" lastName="{{element.lastName}}" course="{{element.course}}" hoursNeeded="{{element.numberOfHours}}" phoneNumber="{{element.phoneNumber}}" email="{{element.username}}"></app-report-card>
         </div>
+    </div>
 </div>
