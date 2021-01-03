@@ -21,6 +21,7 @@ import { AngularFireModule } from '@angular/fire';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
+import { MessageDialogComponent } from './message-dialog/message-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
     FindStudentsComponent,
     ContactUsComponent,
     FooterComponent,
+    MessageDialogComponent,
   ],
 
   imports: [

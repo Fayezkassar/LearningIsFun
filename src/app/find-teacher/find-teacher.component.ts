@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
+import { MessageDialogComponent } from '../message-dialog/message-dialog.component';
 import { course } from './course.model';
 
 @Component({
@@ -32,7 +34,8 @@ export class FindTeacherComponent implements OnInit {
 
 
   constructor(public loginPage: LoginComponent,
-    private http: HttpClient) { }
+    private http: HttpClient,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.isLoggedIn = localStorage.user != null;
@@ -163,6 +166,11 @@ export class FindTeacherComponent implements OnInit {
       } 
       this.http.post<course>(this.userUrl, course).subscribe(res =>
         console.log(res))
+
+        const dialogRef = this.dialog.open(MessageDialogComponent, {
+          width: '400px',
+          height: '200px',
+      })
     }
     this.form.reset();
   }
