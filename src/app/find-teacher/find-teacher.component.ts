@@ -160,7 +160,7 @@ export class FindTeacherComponent implements OnInit {
         firstName: json.firstName,
         lastName: json.lastName,
         phoneNumber: json.phoneNumber,
-        username: json.username,
+        username: json.email,
         course: this.form.get('LearningType3').value,
         numberOfHours: this.form.get('HoursNeeded').value
       } 

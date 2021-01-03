@@ -65,7 +65,13 @@ export class LoginComponent implements OnInit {
         this.error = error);
         
       if(this.firebaseService.isLoggedIn) {
-        localStorage.setItem('userInfo', JSON.stringify(this.userInfo))
+        const userInfo2: user = {
+          firstName: this.userInfo.firstName,
+          lastName: this.userInfo.lastName,
+          email: username,
+          phoneNumber: this.userInfo.phoneNumber
+        }
+        localStorage.setItem('userInfo', JSON.stringify(userInfo2))
         this.isloggedIn = true
         var json = JSON.parse(localStorage.user);
         this.emailAddress = json.email;
