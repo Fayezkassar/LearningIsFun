@@ -4,6 +4,7 @@ import { FirebaseService } from '../services/firebase.service';
 import { HttpClient } from  '@angular/common/http';
 import { user } from './user.model';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
   phoneNumber: string;
 
   constructor(public firebaseService: FirebaseService,
+              private router: Router,
               private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -69,6 +71,7 @@ export class LoginComponent implements OnInit {
         this.emailAddress = json.email;
         this.form.reset();
         this.close()
+        this.router.navigate(['../home'])
       }
     }
   }
@@ -97,6 +100,7 @@ export class LoginComponent implements OnInit {
         this.emailAddress = json.email;
         this.form.reset();
         this.close()
+        this.router.navigate(['../home'])
       }
     }
   }
